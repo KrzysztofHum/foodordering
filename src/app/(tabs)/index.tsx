@@ -1,11 +1,14 @@
 import { StyleSheet, Text, View } from "react-native";
 import Colors from "@/src/constants/Colors";
+import products from "../../../assets/data/products";
+
+const product = products[0];
 
 export default function TabOneScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Pizza Peperoni</Text>
-      <Text style={styles.price}>$12.99</Text>
+      <Text style={styles.title}>{product.name}</Text>
+      <Text style={styles.price}>${product.price}</Text>
     </View>
   );
 }
