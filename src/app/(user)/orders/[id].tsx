@@ -2,8 +2,7 @@ import OrderItemListItem from "@/components/OrderItemListItem";
 import OrderListItem from "@/components/OrderListItem";
 import orders from "@assets/data/orders";
 import { Stack, useLocalSearchParams } from "expo-router";
-import { Text, View } from "react-native";
-import { FlatList } from "react-native-reanimated/lib/typescript/Animated";
+import { Text, View, FlatList } from "react-native";
 
 export default function OrderDetailsScreen() {
   const { id } = useLocalSearchParams();
@@ -16,7 +15,7 @@ export default function OrderDetailsScreen() {
       <Stack.Screen options={{ title: `Order #${id}` }} />
 
       <OrderListItem order={order} />
-      
+
       <FlatList
         data={order.order_items}
         renderItem={({ item }) => <OrderItemListItem item={item} />}

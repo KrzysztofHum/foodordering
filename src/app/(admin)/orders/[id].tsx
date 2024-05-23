@@ -4,8 +4,7 @@ import Colors from "@/constants/Colors";
 import { OrderStatusList } from "@/types";
 import orders from "@assets/data/orders";
 import { Stack, useLocalSearchParams } from "expo-router";
-import { Pressable, Text, View } from "react-native";
-import { FlatList } from "react-native-reanimated/lib/typescript/Animated";
+import { Pressable, Text, View, FlatList } from "react-native";
 
 export default function OrderDetailsScreen() {
   const { id } = useLocalSearchParams();
